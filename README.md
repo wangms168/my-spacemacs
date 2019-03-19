@@ -11,7 +11,7 @@
 
 
 
-windows系统建立连接实例(cmd在d:\emacs目录下)：mklink .\\.emacs.d\\.spacemacs .spacemacs
+windows系统建立连接实例(cmd在d:\emacs目录下)：mklink .spacemacs .\.emacs.d\.spacemacs
 
 .\\.emacs.d\\.spacemacs为源文件，.spacemacs为目标文件。
 
