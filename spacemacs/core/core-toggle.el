@@ -66,7 +66,7 @@ used."
          (off-body (if mode `((,mode -1)) (spacemacs/mplist-get props :off)))
          (prefix-arg-var (plist-get props :prefix))
          (on-message (plist-get props :on-message))
-         ;; (bindkeys (spacemacs//create-key-binding-form props wrapper-func))
+         (bindkeys (spacemacs//create-key-binding-form props wrapper-func))
          ;; we evaluate condition and status only if they are a list or
          ;; a bound symbol
          (status-eval `(and (or (and (symbolp ',status) (boundp ',status))
@@ -108,7 +108,7 @@ used."
                ,(format "Toggle %s off." (symbol-name name))
                (interactive)
                (when (,wrapper-func-status) (,wrapper-func)))))
-       ;; ,@bindkeys
+       ,@bindkeys
        )))
 
 (provide 'core-toggle)

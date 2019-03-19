@@ -111,7 +111,7 @@ used."
          (wrappers (spacemacs//micro-state-create-wrappers
                     name doc msg-func disable-leader bindings))
          (keymap-body (spacemacs//micro-state-fill-map-sexps wrappers))
-         ;; (bindkeys (spacemacs//create-key-binding-form props func))
+         (bindkeys (spacemacs//create-key-binding-form props func))
          )
     `(progn (defun ,func ()
               ,(format "%S micro-state." name)
@@ -130,7 +130,7 @@ used."
                (let ((map (make-sparse-keymap)))
                  ,@keymap-body map) ',(spacemacs//micro-state-create-exit-func
                                        name wrappers persistent on-exit)))
-            ;; ,@bindkeys
+            ,@bindkeys
             )))
 
 (defun spacemacs//micro-state-func-name (name)

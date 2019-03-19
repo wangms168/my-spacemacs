@@ -142,7 +142,7 @@ used."
          (dyn-hint (plist-get props :dynamic-hint))
          (additional-docs (spacemacs/mplist-get props :additional-docs))
          (foreign-keys (plist-get props :foreign-keys))
-         ;; (bindkeys (spacemacs//create-key-binding-form props body-func))
+         (bindkeys (spacemacs//create-key-binding-form props body-func))
          )
     `(progn
        (defvar ,props-var nil
@@ -189,7 +189,7 @@ used."
                               ',dyn-hint
                               (when dotspacemacs-show-transient-state-color-guide
                                 (concat "\n" guide))))))
-           ;; ,@bindkeys
+           ,@bindkeys
            )))))
 
 (provide 'core-transient-state)
