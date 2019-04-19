@@ -1,2 +1,2 @@
-(setq spacemacs-start-directory "~/.emacs-init/my-spacemacs/spacemacs/")
+(setq spacemacs-start-directory (concat user-emacs-directory "spacemacs/"))
 (load-file (concat spacemacs-start-directory "init.el"))
