@@ -2,7 +2,7 @@
 /*
 # 下面的!取反项、若没有上面的任何不纳入版本控制的条件，则任何意义都没有、即仓库内所有内容全部纳入版本控制，相当于,gitignore为空或没有这个文件。
 !.gitignore
-!.spacemacs.d/*
+!.spacemacs.d/
 !spacemacs/
 !init.el
 # !/lisp/* 似乎这样写lisp下文件add不进去
